@@ -59,6 +59,7 @@ def discover_requirements_paths(repo_path):
             break
     # Remove any empty invocations
     invocations.discard(())
+    return invocations
 
 def run_repo_combo(repo_path, req_combo, resolver):
     """
