@@ -9,6 +9,6 @@ Run::
 Find mismatched resolution outcomes::
 
   for r in ~/tmp/test-pip-alpha-resolver/*; do
-    diff "$r"/*-{main,alpha}/install.exit >/dev/null \
+    diff "$r"/*-{main,alpha}/freeze_out.txt >/dev/null \
     || echo "Package list mismatch in $(grep ^d $r/*-main/info.txt | tail -c+4) ($r)"
   done | sort
