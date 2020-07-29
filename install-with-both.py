@@ -18,11 +18,12 @@ import sys
 
 output_dir = os.environ['HOME'] + '/tmp/test-pip-alpha-resolver'
 pyversion = '3.5'
-pip_version = '20.2b1'
+# Latest result of ``pip install --upgrade --pre pip``
+pip_version = '20.2'
 re_req_file = re.compile(r'requirements[^\s]*\.txt')
 resolver_args = {
     'main': (),
-    'alpha': ('--unstable-feature=resolver',)
+    'alpha': ('--use-feature=2020-resolver',)
 }
 
 def main(repo_path):
